@@ -1,4 +1,13 @@
-const serverless = require('serverless-http');
-const app = require('./server');
+const express = require('express');
+const app = express();
 
-module.exports = serverless(app);
+app.get('/home', (req, res) => {
+    res.status(200).json("Welcome, your app is working well");
+});
+
+app.get('/', (req, res) => {
+    res.status(200).json("Welcome, your app is working well");
+});
+
+// Export the app to be used as a serverless function
+module.exports = app;
