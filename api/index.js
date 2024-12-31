@@ -11,7 +11,7 @@ app.get('/home', (req, res) => {
     res.status(200).json("Welcome, your app is working well");
 });
 
-app.get('/', (req, res) => {
+app.get('/',function (req, res) {
     res.status(200).json("Welcome, your app is working well");
 });
 
